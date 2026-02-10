@@ -1,0 +1,701 @@
+{
+  "uuid": "825f622d749871316051c0a89a5bed83",
+  "path": "Offline/Диплом",
+  "name": "Диплом",
+  "content": "",
+  "created_at": "2025-11-11 16:10:29",
+  "updated_at": "2026-01-28 22:45:56",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "272302dfb140752359a5df64afcf48d3",
+      "title": "Приёмник",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "4878bfb32e7145abacf564e5e879618d": 1,
+        "19f7376363884f769e0cb794d82a6e71": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "TDA7010",
+          1,
+          "TDA7010T",
+          "U1",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "KT325B",
+          1,
+          "KT325B",
+          "U2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ]
+      ],
+      "updateTime": 1765784102,
+      "createTime": 1762866630,
+      "histories": [],
+      "created_at": "2025-11-11 16:10:30",
+      "updated_at": "2025-12-15 10:35:02"
+    },
+    {
+      "uuid": "3ec4d15d9677b1e4025ce43974ef96a5",
+      "title": "Передатчик",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "24eeb2ceca08480b92b847b6a310acda": 16,
+        "bb009484ef804a24ac5d18c54b249586": 6,
+        "a4eacdcb63554cb08b3b56477817ab57": 10,
+        "19f7376363884f769e0cb794d82a6e71": 1,
+        "7918c78afc4748499ff99f3c5f960ce8": 1,
+        "4600c7d1ae6f446cb722a27ece1b93f2": 1,
+        "d3b7f9dc032c428e9eb29dda4812eb39": 1,
+        "d3740bdf402b4f37b841976b335b6d7c": 1,
+        "f81c1857d5c04bbb965515ac9ef90c7b": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "0.1u",
+          8,
+          "C0603",
+          "C1,C2,C9,C10,C11,C12,C13,C14",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "2.23pF",
+          1,
+          "C0603",
+          "C3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1.5pF",
+          1,
+          "C0603",
+          "C4",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "24.36pF",
+          1,
+          "C0603",
+          "C5",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1.1pF",
+          1,
+          "C0603",
+          "C6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "23pF",
+          1,
+          "C0603",
+          "C7",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1.33pF",
+          1,
+          "C0603",
+          "C8",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "10pF",
+          2,
+          "C0603",
+          "C15,C16",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "КВ117А",
+          1,
+          "SC-79_L1.2-W0.8-LS1.6-RD",
+          "D1",
+          {
+            "Manufacturer Part": "SMV1275-079LF",
+            "Manufacturer": "SKYWORKS",
+            "Supplier": "LCSC",
+            "Supplier Part": "C150900"
+          }
+        ],
+        [
+          "1m",
+          7,
+          "L0603",
+          "L1,L2,L4,L5,L6,L7,L8",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "100nH",
+          1,
+          "L0603",
+          "L3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "43nH",
+          2,
+          "L0603",
+          "L9,L10",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "BFR92PE6327HTSA1",
+          1,
+          "SOT-23_L2.9-W1.3-P1.90-LS2.4-BR",
+          "Q1",
+          {
+            "Manufacturer Part": "BFR92PE6327",
+            "Manufacturer": "Infineon(英飞凌)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C273250"
+          }
+        ],
+        [
+          "15.4k",
+          1,
+          "R0603",
+          "R1",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "33k",
+          1,
+          "R0603",
+          "R2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1k",
+          1,
+          "R0603",
+          "R3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "8.6k",
+          1,
+          "R0603",
+          "R4",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "22k",
+          1,
+          "R0603",
+          "R5",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "331 Ohm",
+          1,
+          "R0603",
+          "R6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "TDA7010",
+          1,
+          "TDA7010T",
+          "U1",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "KT325B",
+          2,
+          "KT325B",
+          "U2,U3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "HDF434M(TO39)",
+          1,
+          "HDF434M(TO39)",
+          "U4",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "SMA-KE_C9900010995",
+          1,
+          "ANT-TH_KH-SMA",
+          "U5",
+          {
+            "Manufacturer Part": "SMA-KE",
+            "Manufacturer": "null",
+            "Supplier": "LCSC",
+            "Supplier Part": "C9900010995"
+          }
+        ],
+        [
+          "ST-008S-05",
+          1,
+          "ST-008S-05",
+          "U6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ]
+      ],
+      "updateTime": 1769628615,
+      "createTime": 1765784101,
+      "histories": [],
+      "created_at": "2025-12-15 10:35:01",
+      "updated_at": "2026-01-28 22:30:15"
+    },
+    {
+      "uuid": "31f9b70e663f5aa142b597bfb8b06554",
+      "puuid": "825f622d749871316051c0a89a5bed83",
+      "title": "PCB_Диплом",
+      "filename": "PCB_Диплом.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "f8151fdc728a41ebbc304e11d39e5437": 16,
+        "51829df4ad7f46538fea883fb038d6a2": 1,
+        "1f261cf72cb1479ca32177c31156ede3": 10,
+        "2a819e02584e46aea9f04b619de61270": 1,
+        "398691f1f785460098bbe5ee6590333c": 6,
+        "974e20a45ceb4323a24716a5babaa376": 1,
+        "ab5e16a9fa434008a694211d39a67bf9": 1,
+        "ded21017628e4241a5deaf68cd268c98": 1,
+        "305e5a21950045c39b7d151a056c5b23": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "0.1u",
+          8,
+          "C0603",
+          "C1,C2,C9,C10,C11,C12,C13,C14",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "2.23pF",
+          1,
+          "C0603",
+          "C3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1.5pF",
+          1,
+          "C0603",
+          "C4",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "24.36pF",
+          1,
+          "C0603",
+          "C5",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1.1pF",
+          1,
+          "C0603",
+          "C6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "23pF",
+          1,
+          "C0603",
+          "C7",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1.33pF",
+          1,
+          "C0603",
+          "C8",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "10pF",
+          2,
+          "C0603",
+          "C15,C16",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "КВ117А",
+          1,
+          "SC-79_L1.2-W0.8-LS1.6-RD",
+          "D1",
+          {
+            "Manufacturer Part": "SMV1275-079LF",
+            "Manufacturer": "SKYWORKS",
+            "Supplier": "LCSC",
+            "Supplier Part": "C150900"
+          }
+        ],
+        [
+          "1m",
+          7,
+          "L0603",
+          "L1,L2,L4,L5,L6,L7,L8",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "100nH",
+          1,
+          "L0603",
+          "L3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "43nH",
+          2,
+          "L0603",
+          "L9,L10",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "BFR92PE6327HTSA1",
+          1,
+          "SOT-23_L2.9-W1.3-P1.90-LS2.4-BR",
+          "Q1",
+          {
+            "Manufacturer Part": "BFR92PE6327",
+            "Manufacturer": "Infineon(英飞凌)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C273250"
+          }
+        ],
+        [
+          "15.4k",
+          1,
+          "R0603",
+          "R1",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "33k",
+          1,
+          "R0603",
+          "R2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1k",
+          1,
+          "R0603",
+          "R3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "8.6k",
+          1,
+          "R0603",
+          "R4",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "22k",
+          1,
+          "R0603",
+          "R5",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "331 Ohm",
+          1,
+          "R0603",
+          "R6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "KT325B",
+          1,
+          "KT325B",
+          "U3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "HDF434M(TO39)",
+          1,
+          "HDF434M(TO39)",
+          "U4",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "SMA-KE_C9900010995",
+          1,
+          "ANT-TH_KH-SMA",
+          "U5",
+          {
+            "Manufacturer Part": "SMA-KE",
+            "Manufacturer": "null",
+            "Supplier": "LCSC",
+            "Supplier Part": "C9900010995"
+          }
+        ],
+        [
+          "ST-008S-05",
+          1,
+          "ST-008S-05",
+          "U6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ]
+      ],
+      "updateTime": 1769629556,
+      "createTime": 1769528276,
+      "histories": [],
+      "created_at": "2026-01-27 18:37:56",
+      "updated_at": "2026-01-28 22:45:56"
+    }
+  ],
+  "sort": [
+    "272302dfb140752359a5df64afcf48d3",
+    "3ec4d15d9677b1e4025ce43974ef96a5"
+  ],
+  "title": "Диплом",
+  "foldername": "Диплом",
+  "schfilename": "Диплом.json",
+  "schfilemtime": 1769628615908
+}
