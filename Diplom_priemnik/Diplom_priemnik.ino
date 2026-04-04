@@ -57,12 +57,16 @@ boolean button_state = 0;
  
 void setup() 
 {
+ // SPI.begin(SCK, MISO, MOSI, SS);
+  pinMode(PC13, OUTPUT);
   Serial.begin(115200);
   radio.begin();
+  radio.setAutoAck(false);
+
   //Serial.print("ADDRESS :");
   radio.openReadingPipe(0, address);   //Setting the address at which we will receive the data
   radio.setPALevel(RF24_PA_MIN);       //You can set this as minimum or maximum depending on the distance between the transmitter and receiver.
-  radio.setChannel(2);
+  //radio.setChannel(2);
   radio.startListening();              //This sets the module as receiver
 }
 
@@ -70,7 +74,7 @@ void loop()
 {
   if (radio.available())              //Looking for the data.
   {
-    Serial.println("Radio is sniffing");
+   // Serial.println("Radio is sniffing");
   
     char text[6] = "";                 //Saving the incoming data
     radio.read(&text, sizeof(text));    //Reading the data
@@ -78,11 +82,12 @@ void loop()
     if (text == "1")
     {
       digitalWrite(PC13, LOW);
+      delay(200);
     }
     if (text == "0")
     {
       digitalWrite(PC13, HIGH);
-
+      delay(200);
     }
   }
 }

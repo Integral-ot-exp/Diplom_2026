@@ -1,23 +1,26 @@
-#include <stdint.h>
+//#include <stdint.h>
 #include "SPI.h"
 #include "nRF24L01.h"
 #include "RF24.h"
 #define SCK 48
 #define MISO 47
 #define MOSI 38
-#define CE 6
-#define CS 14
+#define CE 43
+#define CS 0
 
 RF24 radio(CE, CS);
 char msg[6] = "1";
 char msg2[6] = "0";
 uint64_t pope = 0xB3B4B5B6F1;
 
+int a = 1, b = 0;  
+
+
 void setup(void)
 {
   //Serial.println(“Starting SPI”);
   //Serial.flush();
-  SPI.begin(SCK, MISO, MOSI, CS);
+  //SPI.begin(SCK, MISO, MOSI, CS);
   /*Serial.println(“Started”);
   Serial.flush();
 
@@ -31,12 +34,12 @@ void setup(void)
   //Serial.println(“OK”);
   Serial.begin(115200);
   radio.begin();
-  radio.setPALevel(RF24_PA_MIN);  //You can set it as minimum or maximum depending on the distance between the transmitter and receiver.
-
-  radio.setChannel(2);
-  radio.setPayloadSize(7);
-  radio.setDataRate(RF24_250KBPS);
   radio.openWritingPipe(pope);
+  radio.setPALevel(RF24_PA_MIN);  //You can set it as minimum or maximum depending on the distance between the transmitter and receiver.
+  //radio.setChannel(2);
+  //radio.setPayloadSize(7);
+  radio.setDataRate(RF24_250KBPS);
+  
 
   radio.stopListening();          //This sets the module as transmitter
 
@@ -66,13 +69,16 @@ void setup(void)
 
 void loop()
 {
-  int counter = 0;
-char text[] = "1";
-char str[6];
-sprintf(str,"%s %d",text,counter);
-radio.write(&str, sizeof(str));  
+//int counter = 0;
+//char text[] = "1";
+//char str[6];
+//sprintf(str,"%s %d",text,counter);
+radio.write(&a, sizeof(a));  
  
-Serial.println(str);
-counter++;
+//Serial.println(str);
+//counter++;
+delay(300);
+
+radio.write(&b, sizeof(b));
 delay(300);
 }
