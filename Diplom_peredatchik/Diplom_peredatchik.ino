@@ -13,7 +13,7 @@ char msg[6] = "1";
 char msg2[6] = "0";
 uint64_t pope = 0xB3B4B5B6F1;
 
-int a = 1, b = 0;  
+//int a = 1, b = 0;  
 
 
 void setup(void)
@@ -73,12 +73,12 @@ void loop()
 //char text[] = "1";
 //char str[6];
 //sprintf(str,"%s %d",text,counter);
-radio.write(&a, sizeof(a));  
+radio.write(msg, sizeof(msg));  
  
 //Serial.println(str);
 //counter++;
 delay(300);
 
-radio.write(&b, sizeof(b));
+radio.write(msg2, sizeof(msg2));
 delay(300);
 }

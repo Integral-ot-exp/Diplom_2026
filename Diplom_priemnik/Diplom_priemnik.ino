@@ -76,18 +76,25 @@ void loop()
   {
    // Serial.println("Radio is sniffing");
   
-    char text[6] = "";                 //Saving the incoming data
+    int text;                 //Saving the incoming data
     radio.read(&text, sizeof(text));    //Reading the data
    //Serial.println(text);
-    if (text == "1")
+    if (text == 1)
     {
       digitalWrite(PC13, LOW);
       delay(200);
     }
-    if (text == "0")
+    if (text == 0)
     {
       digitalWrite(PC13, HIGH);
       delay(200);
     }
+  }
+  else
+  {
+    digitalWrite(PC13, LOW);
+    delay(50);
+    digitalWrite(PC13, HIGH);
+    delay(50);
   }
 }
