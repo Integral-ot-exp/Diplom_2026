@@ -1,100 +1,88 @@
-/*#include <stdint.h>
-//#include "main.h"
-#include "SPI.h"
-#include "nRF24L01.h"
-#include "RF24.h"
-//RF24 radio(10,4);
-#define SCK 15
-#define MISO 16
-#define MOSI 17
-#define CE 31
-#define CS 14
-
-RF24 radio(CE, CS);
-const uint64_t pope = 0xb3b4b5b6f1;
-void setup(void){
- pinMode(PC13, OUTPUT);
- Serial.begin(115200);
- radio.begin();
- radio.setChannel(2);
- radio.setPayloadSize(7);
- radio.setDataRate(RF24_250KBPS);
- radio.openReadingPipe(1,pope);
- radio.startListening();
-}
- 
-void loop(void){
- if (radio.available()){  
-  //digitalWrite(PC13, HIGH);   // turn the LED on (HIGH is the voltage level)
-  //delay(1000);
-  radio.read(msg, 6);
-  if (msg == "1")
-  {
-    digitalWrite(PC13, LOW);
-  }
-  else {
-    digitalWrite(PC13, HIGH);
-  }    // turn the LED off by making the voltage LOW
-  //delay(300);
- }
- else{
-  //digitalWrite(PC13, HIGH);   // turn the LED on (HIGH is the voltage level)
-  /*delay(300);
-  digitalWrite(PC13, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);*/
-  //Serial.println("No radio available");
-// }
-//}*/
-
 //Arduino
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
+
+/*#define SCK 55
+#define MISO 6
+#define MOSI 7
+#define CE 16
+#define CS 4*/
  
 RF24 radio(PB0, PA4); // CE, CSN on Blue Pill
-const uint64_t address = 0xB3B4B5B6F1;
-boolean button_state = 0;
+const uint64_t pope = 0xE8E8F0F0E1LL;
+//boolean button_state = 0;
+
+// The sizeof this struct should not exceed 32 bytes
+/*struct received_data {
+  byte throttle;
+};*/
+
+int ch1_value = 0;
+//Received_data received_data;
+//int throttle = received_data.throttle;   //Reading the data
+
+
  
 void setup() 
-{
- // SPI.begin(SCK, MISO, MOSI, SS);
+{  
+  Serial.begin(9600);
+  //received_data.throttle = 127;
   pinMode(PC13, OUTPUT);
-  Serial.begin(115200);
   radio.begin();
-  radio.setAutoAck(false);
-
+  radio.setAutoAck(0);
+  radio.setDataRate(RF24_250KBPS);
   //Serial.print("ADDRESS :");
-  radio.openReadingPipe(0, address);   //Setting the address at which we will receive the data
+  radio.openReadingPipe(1, pope);   //Setting the address at which we will receive the data
   radio.setPALevel(RF24_PA_MIN);       //You can set this as minimum or maximum depending on the distance between the transmitter and receiver.
-  //radio.setChannel(2);
+  radio.setChannel(0x80);
+  radio.setPayloadSize(32);   // размер пакета, в байтах
+
+  radio.powerUp();
   radio.startListening();              //This sets the module as receiver
+}
+
+unsigned long last_Time = 0;
+
+//We create the function that will read the data each certain time
+void receive_the_data()
+{
+  
 }
 
 void loop()
 {
-  if (radio.available())              //Looking for the data.
-  {
-   // Serial.println("Radio is sniffing");
-  
-    int text;                 //Saving the incoming data
-    radio.read(&text, sizeof(text));    //Reading the data
+  //receive_the_data();
+  byte throttle;
+  while ( radio.available() ) {
+  radio.read(&throttle, sizeof(throttle));
+  //last_Time = millis(); //Here we receive the data
+  }
+  //if (radio.available())
+  //{              //Looking for the data.
+  //digitalWrite(PC13, HIGH);
+  //delay(300);
    //Serial.println(text);
-    if (text == 1)
-    {
-      digitalWrite(PC13, LOW);
-      delay(200);
-    }
-    if (text == 0)
+    if (throttle == 1)
     {
       digitalWrite(PC13, HIGH);
-      delay(200);
+      //delay(300);
+      //Serial.println(val);  
     }
-  }
-  else
+    if (throttle == 0)
+    {
+      digitalWrite(PC13, LOW);
+      //delay(300);
+      //Serial.println(val);  
+    }
+ // }
+ /* else
   {
     digitalWrite(PC13, LOW);
     delay(50);
+    Serial.println(val);  
     digitalWrite(PC13, HIGH);
     delay(50);
-  }
+    Serial.println(val);  
+  }*/
 }

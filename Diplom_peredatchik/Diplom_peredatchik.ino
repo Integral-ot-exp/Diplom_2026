@@ -2,83 +2,53 @@
 #include "SPI.h"
 #include "nRF24L01.h"
 #include "RF24.h"
-#define SCK 48
+/*#define SCK 48
 #define MISO 47
 #define MOSI 38
 #define CE 43
 #define CS 0
 
-RF24 radio(CE, CS);
-char msg[6] = "1";
-char msg2[6] = "0";
-uint64_t pope = 0xB3B4B5B6F1;
+RF24 radio(CE, CS);*/
+RF24 radio(PB0, PA4);
+
+//char msg[6] = "1";
+//char msg2[6] = "0";
+const uint64_t pope = 0xE8E8F0F0E1LL;
 
 //int a = 1, b = 0;  
 
+//struct MyData {
+  byte throttle; 
+  //int throttle0; 
+//};
+//MyData data;
 
 void setup(void)
 {
-  //Serial.println(“Starting SPI”);
-  //Serial.flush();
-  //SPI.begin(SCK, MISO, MOSI, CS);
-  /*Serial.println(“Started”);
-  Serial.flush();
 
-  while (!radio.begin(&SPI)) //активировать модуль
-  {
-    Serial.println(“Can’t find RF24”);
-    Serial.flush();
-    delay(1);
-  }*/
-
-  //Serial.println(“OK”);
   Serial.begin(115200);
   radio.begin();
-  radio.openWritingPipe(pope);
+  radio.setAutoAck(0);
   radio.setPALevel(RF24_PA_MIN);  //You can set it as minimum or maximum depending on the distance between the transmitter and receiver.
-  //radio.setChannel(2);
-  //radio.setPayloadSize(7);
   radio.setDataRate(RF24_250KBPS);
-  
-
-  radio.stopListening();          //This sets the module as transmitter
-
-}
-
-
-
-//RF24 radio(43, 6, 26, 48, 38);
-
-//RF24 radio(43, 6);
- 
-/*void setup(void) {
-  Serial.begin(115200);
-  radio.begin();
-  radio.setChannel(2);
-  radio.setPayloadSize(7);
-  radio.setDataRate(RF24_250KBPS);
+  radio.enableAckPayload();   // разрешить отсылку данных в ответ на входящий сигнал
+  radio.setPayloadSize(32);   // размер пакета, в байтах
   radio.openWritingPipe(pope);
-}*/
-/*void loop(void) {
-  //Serial.println("send ...");
-  radio.write(msg, 6);
-  delay(300);
-  radio.write(msg2, 6);
-  delay(100);
-}*/
+  radio.setChannel(0x80);
+  radio.powerUp();
+  radio.stopListening();          //This sets the module as transmitter
+  pinMode(PC13, OUTPUT);
+}
 
 void loop()
 {
-//int counter = 0;
-//char text[] = "1";
-//char str[6];
-//sprintf(str,"%s %d",text,counter);
-radio.write(msg, sizeof(msg));  
- 
-//Serial.println(str);
-//counter++;
-delay(300);
-
-radio.write(msg2, sizeof(msg2));
-delay(300);
+  throttle = 1;
+  radio.write(&throttle, sizeof(throttle));
+  digitalWrite(PC13, HIGH);
+  delay(2000);
+  
+  throttle = 0;
+  radio.write(&throttle, sizeof(throttle));
+  digitalWrite(PC13, LOW);
+  delay(2000);
 }
