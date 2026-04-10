@@ -36,7 +36,7 @@ void setup()
   radio.openReadingPipe(1, pope);   //Setting the address at which we will receive the data
   radio.setPALevel(RF24_PA_MIN);       //You can set this as minimum or maximum depending on the distance between the transmitter and receiver.
   radio.setChannel(0x80);
-  radio.setPayloadSize(32);   // размер пакета, в байтах
+  radio.setPayloadSize(4);   // размер пакета, в байтах
 
   radio.powerUp();
   radio.startListening();              //This sets the module as receiver
@@ -53,29 +53,29 @@ void receive_the_data()
 void loop()
 {
   //receive_the_data();
-  byte throttle;
+  int throttle;
   while ( radio.available() ) {
   radio.read(&throttle, sizeof(throttle));
   //last_Time = millis(); //Here we receive the data
   }
-  //if (radio.available())
-  //{              //Looking for the data.
-  //digitalWrite(PC13, HIGH);
-  //delay(300);
+  if (radio.available())
+  {              //Looking for the data.
+  digitalWrite(PC13, HIGH);
+  delay(300);
    //Serial.println(text);
     if (throttle == 1)
     {
       digitalWrite(PC13, HIGH);
-      //delay(300);
+      delay(300);
       //Serial.println(val);  
     }
     if (throttle == 0)
     {
       digitalWrite(PC13, LOW);
-      //delay(300);
+      delay(300);
       //Serial.println(val);  
     }
- // }
+ }
  /* else
   {
     digitalWrite(PC13, LOW);

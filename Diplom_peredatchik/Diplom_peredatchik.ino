@@ -18,7 +18,7 @@ const uint64_t pope = 0xE8E8F0F0E1LL;
 //int a = 1, b = 0;  
 
 //struct MyData {
-  byte throttle; 
+  int throttle; 
   //int throttle0; 
 //};
 //MyData data;
@@ -26,13 +26,13 @@ const uint64_t pope = 0xE8E8F0F0E1LL;
 void setup(void)
 {
 
-  Serial.begin(115200);
+  Serial.begin(9600);
   radio.begin();
   radio.setAutoAck(0);
   radio.setPALevel(RF24_PA_MIN);  //You can set it as minimum or maximum depending on the distance between the transmitter and receiver.
   radio.setDataRate(RF24_250KBPS);
   radio.enableAckPayload();   // разрешить отсылку данных в ответ на входящий сигнал
-  radio.setPayloadSize(32);   // размер пакета, в байтах
+  radio.setPayloadSize(4);   // размер пакета, в байтах
   radio.openWritingPipe(pope);
   radio.setChannel(0x80);
   radio.powerUp();
@@ -45,10 +45,10 @@ void loop()
   throttle = 1;
   radio.write(&throttle, sizeof(throttle));
   digitalWrite(PC13, HIGH);
-  delay(2000);
+  delay(300);
   
   throttle = 0;
   radio.write(&throttle, sizeof(throttle));
   digitalWrite(PC13, LOW);
-  delay(2000);
+  delay(300);
 }
