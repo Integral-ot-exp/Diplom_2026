@@ -24,25 +24,25 @@ const uint64_t pope = 0xE8E8F0F0E1LL;
 //MyData data;
 
 void setup(void)
-{
+{ 
 
   Serial.begin(9600);
+  radio.powerUp();
   radio.begin();
   radio.setAutoAck(0);
   radio.setPALevel(RF24_PA_MIN);  //You can set it as minimum or maximum depending on the distance between the transmitter and receiver.
-  radio.setDataRate(RF24_250KBPS);
+  radio.setDataRate(RF24_1MBPS);
   radio.enableAckPayload();   // разрешить отсылку данных в ответ на входящий сигнал
   radio.setPayloadSize(4);   // размер пакета, в байтах
   radio.openWritingPipe(pope);
   radio.setChannel(0x80);
-  radio.powerUp();
   radio.stopListening();          //This sets the module as transmitter
   pinMode(PC13, OUTPUT);
 }
 
 void loop()
 {
-  throttle = 1;
+  throttle = 128;
   radio.write(&throttle, sizeof(throttle));
   digitalWrite(PC13, HIGH);
   delay(300);

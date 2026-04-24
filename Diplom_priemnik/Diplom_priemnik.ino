@@ -28,17 +28,18 @@ void setup()
 {  
   Serial.begin(9600);
   //received_data.throttle = 127;
+  radio.powerUp();
   pinMode(PC13, OUTPUT);
   radio.begin();
   radio.setAutoAck(0);
-  radio.setDataRate(RF24_250KBPS);
+  radio.setDataRate(RF24_1MBPS);
   //Serial.print("ADDRESS :");
   radio.openReadingPipe(1, pope);   //Setting the address at which we will receive the data
   radio.setPALevel(RF24_PA_MIN);       //You can set this as minimum or maximum depending on the distance between the transmitter and receiver.
   radio.setChannel(0x80);
   radio.setPayloadSize(4);   // размер пакета, в байтах
 
-  radio.powerUp();
+  
   radio.startListening();              //This sets the module as receiver
 }
 
@@ -60,9 +61,6 @@ void loop()
   }
   if (radio.available())
   {              //Looking for the data.
-  digitalWrite(PC13, HIGH);
-  delay(300);
-   //Serial.println(text);
     if (throttle == 1)
     {
       digitalWrite(PC13, HIGH);
@@ -76,13 +74,13 @@ void loop()
       //Serial.println(val);  
     }
  }
- /* else
+ else
   {
     digitalWrite(PC13, LOW);
     delay(50);
-    Serial.println(val);  
+//    Serial.println(val);  
     digitalWrite(PC13, HIGH);
     delay(50);
-    Serial.println(val);  
-  }*/
+    //Serial.println(val);  
+  }
 }
