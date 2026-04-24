@@ -1,14 +1,14 @@
 //#include <stdint.h>
-#include "SPI.h"
+/*#include "SPI.h"
 #include "nRF24L01.h"
 #include "RF24.h"
-/*#define SCK 48
-#define MISO 47
-#define MOSI 38
-#define CE 43
-#define CS 0
+#define SCK 5
+#define MISO 6
+#define MOSI 7
+#define CE 16
+#define CS 4
 
-RF24 radio(CE, CS);*/
+//RF24 radio(CE, CS);
 RF24 radio(PB0, PA4);
 
 //char msg[6] = "1";
@@ -38,6 +38,7 @@ void setup(void)
   radio.setChannel(0x80);
   radio.stopListening();          //This sets the module as transmitter
   pinMode(PC13, OUTPUT);
+  CE_RESET;
 }
 
 void loop()
@@ -51,4 +52,35 @@ void loop()
   radio.write(&throttle, sizeof(throttle));
   digitalWrite(PC13, LOW);
   delay(300);
+}*/
+
+
+
+#include <SPI.h>
+#include <nRF24L01.h>
+#include <RF24.h>
+ 
+RF24 radio(PB0, PA4); // CE, CSN on Blue Pill 
+const uint64_t address = 0xF0F0F0F0E1LL;
+int counter = 0;
+ 
+void setup() 
+{
+Serial.begin(9600);
+radio.begin();                  //Starting the Wireless communication
+radio.openWritingPipe(address); //Setting the address where we will send the data
+radio.setPALevel(RF24_PA_MIN);  //You can set it as minimum or maximum depending on the distance between the transmitter and receiver.
+radio.stopListening();          //This sets the module as transmitter
+}
+ 
+void loop()
+{
+char text[] = " Hello World";
+char str[50];
+sprintf(str,"%s %d",text,counter);
+radio.write(&str, sizeof(str));  
+ 
+Serial.println(str);
+counter++;
+delay(2000);
 }
