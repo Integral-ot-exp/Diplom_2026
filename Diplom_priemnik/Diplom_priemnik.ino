@@ -1,133 +1,43 @@
-//Arduino
-/*#include <SPI.h>
-#include <nRF24L01.h>
-#include <RF24.h>
-
-#define SCK 5
-#define MISO 6
-#define MOSI 7
-#define CE 16
-#define CS 4
- 
-RF24 radio(PB0, PA4); // CE, CSN on Blue Pill
-const uint64_t pope = 0xE8E8F0F0E1LL;
-//boolean button_state = 0;
-
-// The sizeof this struct should not exceed 32 bytes
-/*struct received_data {
-  byte throttle;
-};*/
-
-/*int ch1_value = 0;
-//Received_data received_data;
-//int throttle = received_data.throttle;   //Reading the data
-
-
- 
-void setup() 
-{  
-  Serial.begin(9600);
-  //received_data.throttle = 127;
-  radio.powerUp();
-  pinMode(PC13, OUTPUT);
-  radio.begin();
-  radio.setAutoAck(0);
-  radio.setDataRate(RF24_1MBPS);
-  //Serial.print("ADDRESS :");
-  radio.openReadingPipe(1, pope);   //Setting the address at which we will receive the data
-  radio.setPALevel(RF24_PA_MIN);       //You can set this as minimum or maximum depending on the distance between the transmitter and receiver.
-  radio.setChannel(0x80);
-  radio.setPayloadSize(4);   // размер пакета, в байтах
-
-  //CE_RESET;
-
-  radio.startListening();              //This sets the module as receiver
-}
-
-unsigned long last_Time = 0;
-
-//We create the function that will read the data each certain time
-void receive_the_data()
-{
-  
-}
-
-void loop()
-{
-  //receive_the_data();
-  int throttle;
-  while ( radio.available() ) {
-  radio.read(&throttle, sizeof(throttle));
-  //last_Time = millis(); //Here we receive the data
-  }
-  if (radio.available())
-  {              //Looking for the data.
-    if (throttle == 1)
-    {
-      digitalWrite(PC13, HIGH);
-      //delay(300);
-      //Serial.println(val);  
-    }
-    if (throttle == 0)
-    {
-      digitalWrite(PC13, LOW);
-      //delay(300);
-      //Serial.println(val);  
-    }
- }
- /*else
-  {
-    digitalWrite(PC13, LOW);
-    delay(50);
-//    Serial.println(val);  
-    digitalWrite(PC13, HIGH);
-    delay(50);
-    //Serial.println(val);  
-  }*/
-//}
-
-
-
 #include <SPI.h>
-#include <nRF24L01.h>
 #include <RF24.h>
- 
-RF24 radio(PB0, PA4); // CE, CSN on Blue Pill
-const uint64_t address = 0xF0F0F0F0E1LL;
-boolean button_state = 0;
- 
-void setup() 
-{
-  Serial.begin(9600);
+
+#define CE_PIN  PA4
+#define CSN_PIN PB0
+#define LED_PIN PC13 // Встроенный светодиод на Blue Pill
+
+RF24 radio(CE_PIN, CSN_PIN);
+const byte address[6] = "00001"; // Тот же адрес, что и у передатчика
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, HIGH); // LED выключен (на Blue Pill светодиод активный низкий)
+  
+  Serial.begin(115200);
+  
   radio.begin();
-  Serial.print("ADDRESS :");
-  radio.openReadingPipe(0, address);   //Setting the address at which we will receive the data
-  radio.setPALevel(RF24_PA_MIN);       //You can set this as minimum or maximum depending on the distance between the transmitter and receiver.
-  radio.startListening();              //This sets the module as receiver
+  radio.openReadingPipe(0, address);
+  radio.setPALevel(RF24_PA_LOW);
+  radio.setAutoAck(false);            // Должно совпадать с передатчиком
+  radio.startListening();             // Режим приёма
+  
+  Serial.println("RX: Ожидание данных...");
 }
 
-void loop()
-{
-  if (radio.available())              //Looking for the data.
-  {
-    Serial.println("Radio is sniffing");
-  
-    char text[32] = "";                 //Saving the incoming data
-    radio.read(&text, sizeof(text));    //Reading the data
-    Serial.println(text);
-    while (text == " Hello World")
-    {
-      digitalWrite(PC13, HIGH);
-      delay(300);
-      digitalWrite(PC13, LOW);
-      delay(300);
+void loop() {
+  if (radio.available()) {
+    char message[32] = {0};
+    radio.read(&message, sizeof(message));
+    
+    Serial.print("RX Получено: ");
+    Serial.println(message);
+    
+    if (strcmp(message, "LED_ON") == 0){
+    digitalWrite(LED_PIN, LOW);}
+    if (strcmp(message, "LED_OFF") == 0){
+      digitalWrite(LED_PIN, HIGH);
     }
-  }
-  else
-  {
-    digitalWrite(PC13, HIGH);
-    delay(50);
-    digitalWrite(PC13, LOW);
-    delay(50);
+     // Включаем светодиод
+    // Примечание: светодиод останется включённым до перезагрузки или явного выключения.
+    // При необходимости добавьте таймер выключения через millis().
   }
 }
