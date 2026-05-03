@@ -16,7 +16,7 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
   radio.begin();
   radio.openWritingPipe(address);
-  radio.setPALevel(RF24_PA_LOW);      // Низкая мощность для ближней связи (меньше помех)
+  radio.setPALevel(RF24_PA_MAX);      // Низкая мощность для ближней связи (меньше помех)
   radio.setAutoAck(false);            // Отключаем ACK для строгого соблюдения интервала 300 мс
   radio.stopListening();              // Режим передачи
   
