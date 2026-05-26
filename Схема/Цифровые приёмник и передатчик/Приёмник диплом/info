@@ -1,0 +1,380 @@
+{
+  "uuid": "214f6d6308cee6f23789719afed24f9b",
+  "path": "Offline/Приёмник диплом",
+  "name": "Приёмник диплом",
+  "content": "",
+  "created_at": "2026-02-03 20:41:18",
+  "updated_at": "2026-05-26 14:40:22",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "220f3b3ec70c260021b2085861e6eac7",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "0f4f76192d2f4d668b5e5e6b3685f1ce": 1,
+        "d3740bdf402b4f37b841976b335b6d7c": 1,
+        "595f1b159cbb1fc2159315f85f2042a1": 1,
+        "24eeb2ceca08480b92b847b6a310acda": 5,
+        "bb009484ef804a24ac5d18c54b249586": 8,
+        "81b4a575e8ea49919f471f542056e001": 1,
+        "e3be08079aa14ad891d42f46a7df393a": 3
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "10n",
+          2,
+          "C0603",
+          "C1,C2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "0.1u",
+          2,
+          "C0603",
+          "C_DEC1,C_F2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "10u",
+          2,
+          "CAP-D3.0×F1.5",
+          "C_DEC2,C_F1",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1u",
+          1,
+          "CAP-D3.0×F1.5",
+          "C_IN",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "100pf",
+          1,
+          "C0603",
+          "C_PROT",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "2.4GHz",
+          1,
+          "WIRELM-SMD_L28.6-W15.3-P2.54_NRF24L01",
+          "MK1",
+          {
+            "Manufacturer Part": "NF-04",
+            "Manufacturer": "Ai-Thinker(安信可)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C90751"
+          }
+        ],
+        [
+          "2k",
+          1,
+          "R0603",
+          "R1",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "100k",
+          1,
+          "R0603",
+          "R_BIAS",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "10k",
+          5,
+          "R0603",
+          "R_DIV1,R_DIV2,R_F,R_G,R_PULL",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "100",
+          1,
+          "R0603",
+          "R_OUT",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "TL072",
+          1,
+          "TL072",
+          "U2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "Blue_Pill",
+          1,
+          "STM32F103C8T6-BLUEPILL 1",
+          "U4",
+          {
+            "Manufacturer Part": "STM32Duino",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "ST-008S-05",
+          1,
+          "ST-008S-05",
+          "U6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ]
+      ],
+      "updateTime": 1779745037,
+      "createTime": 1770140479,
+      "histories": [],
+      "created_at": "2026-02-03 20:41:19",
+      "updated_at": "2026-05-26 00:37:17"
+    },
+    {
+      "uuid": "d596c18eef0c4e69bc1bc869da3c298a",
+      "puuid": "214f6d6308cee6f23789719afed24f9b",
+      "title": "PCB_Приёмник диплом",
+      "filename": "PCB_Приёмник диплом.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "f8151fdc728a41ebbc304e11d39e5437": 5,
+        "35d352cd7c764bc4af3dfa74cc468760": 1,
+        "ded21017628e4241a5deaf68cd268c98": 1,
+        "398691f1f785460098bbe5ee6590333c": 8,
+        "a39e211d07fc49f09c02819227c89e5f": 3,
+        "9e50a9b13af9436ba24c632b329638f9": 1,
+        "e2ed9cd33ed840b8853df7f68393667b": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "10n",
+          2,
+          "C0603",
+          "C1,C2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "0.1u",
+          2,
+          "C0603",
+          "C3,C5",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "100p",
+          1,
+          "C0603",
+          "C8",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "10u",
+          2,
+          "CAP-D3.0×F1.5",
+          "C4,C6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1u",
+          1,
+          "CAP-D3.0×F1.5",
+          "C7",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "2.4GHz",
+          1,
+          "WIRELM-SMD_L28.6-W15.3-P2.54_NRF24L01",
+          "MK1",
+          {
+            "Manufacturer Part": "NF-04",
+            "Manufacturer": "Ai-Thinker(安信可)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C90751"
+          }
+        ],
+        [
+          "1k",
+          2,
+          "R0603",
+          "R1,R2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "10k",
+          5,
+          "R0603",
+          "R3,R4,R5,R6,R8",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "100",
+          1,
+          "R0603",
+          "R7",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "TL072",
+          1,
+          "TL072",
+          "U2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "Blue_Pill",
+          1,
+          "STM32F103C8T6-BLUEPILL 1",
+          "U4",
+          {
+            "Manufacturer Part": "STM32Duino",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "ST-008S-05",
+          1,
+          "ST-008S-05",
+          "U6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ]
+      ],
+      "updateTime": 1779795622,
+      "createTime": 1779283630,
+      "histories": [],
+      "created_at": "2026-05-20 16:27:10",
+      "updated_at": "2026-05-26 14:40:22"
+    }
+  ],
+  "sort": [],
+  "title": "Приёмник диплом",
+  "foldername": "Приёмник диплом",
+  "schfilename": "Приёмник диплом.json",
+  "schfilemtime": 1779745037428
+}
