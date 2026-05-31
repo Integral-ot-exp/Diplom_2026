@@ -4,7 +4,7 @@
   "name": "Приёмник диплом",
   "content": "",
   "created_at": "2026-02-03 20:41:18",
-  "updated_at": "2026-05-26 14:40:22",
+  "updated_at": "2026-05-29 18:34:22",
   "stick": "",
   "documents": [
     {
@@ -129,9 +129,9 @@
         ],
         [
           "10k",
-          5,
+          4,
           "R0603",
-          "R_DIV1,R_DIV2,R_F,R_G,R_PULL",
+          "R_DIV1,R_DIV2,R_F,R_G",
           {
             "Manufacturer Part": "",
             "Manufacturer": "",
@@ -144,6 +144,18 @@
           1,
           "R0603",
           "R_OUT",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "1k",
+          1,
+          "R0603",
+          "R_PULL",
           {
             "Manufacturer Part": "",
             "Manufacturer": "",
@@ -188,11 +200,11 @@
           }
         ]
       ],
-      "updateTime": 1779745037,
+      "updateTime": 1780068862,
       "createTime": 1770140479,
       "histories": [],
       "created_at": "2026-02-03 20:41:19",
-      "updated_at": "2026-05-26 00:37:17"
+      "updated_at": "2026-05-29 18:34:22"
     },
     {
       "uuid": "d596c18eef0c4e69bc1bc869da3c298a",
@@ -376,5 +388,5 @@
   "title": "Приёмник диплом",
   "foldername": "Приёмник диплом",
   "schfilename": "Приёмник диплом.json",
-  "schfilemtime": 1779745037428
+  "schfilemtime": 1780068862462
 }
