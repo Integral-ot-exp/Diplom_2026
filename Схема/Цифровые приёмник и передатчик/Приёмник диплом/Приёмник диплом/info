@@ -4,7 +4,7 @@
   "name": "Приёмник диплом",
   "content": "",
   "created_at": "2026-02-03 20:41:18",
-  "updated_at": "2026-06-11 22:29:18",
+  "updated_at": "2026-06-13 18:53:37",
   "stick": "",
   "documents": [
     {
@@ -19,7 +19,8 @@
         "595f1b159cbb1fc2159315f85f2042a1": 1,
         "24eeb2ceca08480b92b847b6a310acda": 3,
         "bb009484ef804a24ac5d18c54b249586": 3,
-        "34103ff3e7364a04a3db623a2d78a0d5": 1
+        "34103ff3e7364a04a3db623a2d78a0d5": 1,
+        "734a9e7b7171494594abf801bbd60374": 1
       },
       "BOM": [
         [
@@ -35,10 +36,13 @@
           "C0603",
           "C1,C2",
           {
-            "Manufacturer Part": "",
-            "Manufacturer": "",
+            "Supplier Part": "",
             "Supplier": "",
-            "Supplier Part": ""
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "C_0603_US",
+            "Manufacturer Part": "",
+            "puuid": "f8151fdc728a41ebbc304e11d39e5437",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
           }
         ],
         [
@@ -47,10 +51,13 @@
           "C0603",
           "C3",
           {
-            "Manufacturer Part": "",
-            "Manufacturer": "",
+            "Supplier Part": "",
             "Supplier": "",
-            "Supplier Part": ""
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "C_0603_US",
+            "Manufacturer Part": "",
+            "puuid": "f8151fdc728a41ebbc304e11d39e5437",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
           }
         ],
         [
@@ -59,10 +66,14 @@
           "WIRELM-SMD_L28.6-W15.3-P2.54_NRF24L01",
           "MK1",
           {
-            "Manufacturer Part": "NF-04",
-            "Manufacturer": "Ai-Thinker(安信可)",
             "Supplier": "LCSC",
-            "Supplier Part": "C90751"
+            "Manufacturer": "Ai-Thinker(安信可)",
+            "Manufacturer Part": "NF-04",
+            "Supplier Part": "C90751",
+            "JLCPCB Part Class": "Extended Part",
+            "spiceSymbolName": "NRF24L01",
+            "puuid": "9e50a9b13af9436ba24c632b329638f9",
+            "uuid": "595f1b159cbb1fc2159315f85f2042a1"
           }
         ],
         [
@@ -71,10 +82,13 @@
           "R0603",
           "R1",
           {
-            "Manufacturer Part": "",
-            "Manufacturer": "",
+            "Supplier Part": "",
             "Supplier": "",
-            "Supplier Part": ""
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "R_0603_EU",
+            "Manufacturer Part": "",
+            "puuid": "398691f1f785460098bbe5ee6590333c",
+            "uuid": "bb009484ef804a24ac5d18c54b249586"
           }
         ],
         [
@@ -83,10 +97,13 @@
           "R0603",
           "R2",
           {
-            "Manufacturer Part": "",
-            "Manufacturer": "",
+            "Supplier Part": "",
             "Supplier": "",
-            "Supplier Part": ""
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "R_0603_EU",
+            "Manufacturer Part": "",
+            "puuid": "398691f1f785460098bbe5ee6590333c",
+            "uuid": "bb009484ef804a24ac5d18c54b249586"
           }
         ],
         [
@@ -95,10 +112,13 @@
           "R0603",
           "R3",
           {
-            "Manufacturer Part": "",
-            "Manufacturer": "",
+            "Supplier Part": "",
             "Supplier": "",
-            "Supplier Part": ""
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "R_0603_EU",
+            "Manufacturer Part": "",
+            "puuid": "398691f1f785460098bbe5ee6590333c",
+            "uuid": "bb009484ef804a24ac5d18c54b249586"
           }
         ],
         [
@@ -107,10 +127,32 @@
           "ST-008S-05(REVERSED)",
           "U1",
           {
-            "Manufacturer Part": "",
             "Manufacturer": "",
+            "Manufacturer Part": "",
             "Supplier": "",
-            "Supplier Part": ""
+            "Supplier Part": "",
+            "link": "",
+            "Contributor": "danik_mus",
+            "spiceSymbolName": "ST-008S-05(REVERSED)",
+            "puuid": "64621bc1649d4954b7c5e7fee2ed0b2c",
+            "uuid": "34103ff3e7364a04a3db623a2d78a0d5"
+          }
+        ],
+        [
+          "LMV358IDR-P",
+          1,
+          "SOP-8_L4.9-W3.9-P1.27-LS6.0-BL",
+          "U3",
+          {
+            "Contributor": "LCSC",
+            "Supplier": "LCSC",
+            "Supplier Part": "C2928703",
+            "Manufacturer": "TECH PUBLIC(台舟)",
+            "Manufacturer Part": "LMV358IDR",
+            "JLCPCB Part Class": "Extended Part",
+            "spiceSymbolName": "LMV358IDR-P",
+            "puuid": "1fe0adc377c7472ba321d68db1c050fa",
+            "uuid": "734a9e7b7171494594abf801bbd60374"
           }
         ],
         [
@@ -120,17 +162,20 @@
           "U4",
           {
             "Manufacturer Part": "STM32Duino",
-            "Manufacturer": "",
+            "Contributor": "gianpysurf",
+            "Supplier Part": "",
             "Supplier": "",
-            "Supplier Part": ""
+            "spiceSymbolName": "Blue_Pill",
+            "puuid": "e2ed9cd33ed840b8853df7f68393667b",
+            "uuid": "0f4f76192d2f4d668b5e5e6b3685f1ce"
           }
         ]
       ],
-      "updateTime": 1781205892,
+      "updateTime": 1781366017,
       "createTime": 1770140479,
       "histories": [],
       "created_at": "2026-02-03 20:41:19",
-      "updated_at": "2026-06-11 22:24:52"
+      "updated_at": "2026-06-13 18:53:37"
     },
     {
       "uuid": "d596c18eef0c4e69bc1bc869da3c298a",
@@ -146,7 +191,8 @@
         "9e50a9b13af9436ba24c632b329638f9": 1,
         "e2ed9cd33ed840b8853df7f68393667b": 1,
         "398691f1f785460098bbe5ee6590333c": 3,
-        "64621bc1649d4954b7c5e7fee2ed0b2c": 1
+        "64621bc1649d4954b7c5e7fee2ed0b2c": 1,
+        "1fe0adc377c7472ba321d68db1c050fa": 1
       },
       "BOM": [
         [
@@ -301,16 +347,16 @@
           }
         ]
       ],
-      "updateTime": 1781206158,
+      "updateTime": 1781365434,
       "createTime": 1779283630,
       "histories": [],
       "created_at": "2026-05-20 16:27:10",
-      "updated_at": "2026-06-11 22:29:18"
+      "updated_at": "2026-06-13 18:43:54"
     }
   ],
   "sort": [],
   "title": "Приёмник диплом",
   "foldername": "Приёмник диплом",
   "schfilename": "Приёмник диплом.json",
-  "schfilemtime": 1781205892934
+  "schfilemtime": 1781366017622
 }
