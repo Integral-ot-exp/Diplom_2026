@@ -1,5 +1,6 @@
 #include <SPI.h>
 #include <RF24.h>
+#include <stm32f1xx_hal.h>
 
 // Пины управления (адаптированы под официальное ядро STM32)
 #define CE_PIN  PA4
